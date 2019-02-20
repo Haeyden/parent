@@ -1,0 +1,16 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false #不使用Eureka 服务进行注册,因为它本身就是Eureka服务
+    fetchRegistry: false #不要在本地缓存数据
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  server:
+#    waitTimeInMsWhenSyncEmpty: 5 #服务器接收请求前等待的初始时间,让所有的服务在通告他们之前通过它来注册
+##每次服务注册需要30s的时间才能显示在Eureka服务中,因为Eureka需要从接收3次连续心跳包ping,每次ping间隔10s,然后才能使用这个服务
+spring:
+  application:
+    name: eureka-server
