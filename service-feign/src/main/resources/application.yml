@@ -2,9 +2,9 @@ server:
   port: 8765
 spring:
   application:
-    name: service-fegin
-
+    name: service-feign
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+feign.hystrix.enabled: true #Feign是自带断路器的，在D版本的Spring Cloud之后，它没有默认打开,需要手动打开
