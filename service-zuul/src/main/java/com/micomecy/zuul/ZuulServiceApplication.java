@@ -1,5 +1,8 @@
 package com.micomecy.zuul;
 
+import com.micomecy.zuul.fliter.MyFilter;
+import com.netflix.zuul.ZuulFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
