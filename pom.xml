@@ -9,6 +9,7 @@
         <module>service-ribbon</module>
         <module>service-feign</module>
         <module>service-zuul</module>
+        <module>service-config</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
